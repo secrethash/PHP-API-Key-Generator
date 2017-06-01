@@ -1,0 +1,16 @@
+{
+    "name": "secrethash/thekeygen",
+    "description": "API KEY GENERATOR",
+    "type": "metapackage",
+    "require": {
+        "secrethash/trickster": "^1.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shashwat Mishra",
+            "email": "shashwat9630@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
