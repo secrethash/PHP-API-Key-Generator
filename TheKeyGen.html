@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheKeyGen</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="the-key-generator">The Key Generator</h1>
+
+<p>It generates API keys that are a part of <code>trick</code> of <a href="https://github.com/secrethash/trickster">Trickster</a>. Soon many more key generating <code>tricks</code> will be updated in this key generator class.</p>
+
+<h1 id="about">About</h1>
+
+<p>The key that is generated will be <strong><em>32 non-cryptographic random characters long</em></strong>, and can contain 0-9, a-z (lowercase), A-Z (uppercase). Adding the option for the characters to repeat, creates over <strong><em>450 quadrillion combinations</em></strong>.</p>
+
+<p>To keep the code short, I generate a random number using rand(48, 122). This number will then be filtered for the ranges of 58 to 64, and 91 to 96. If the random number is present in the previous ranges, the number must be discarded and then recreated. This is done until a number is generated outside of the previous ranges, and this in turn must be completed 32 times. This is done so that the random number can convert into ASCII code (i.e. &amp;#48 ; = 0, whitespace added the prevent conversion) to generate the characters mentioned above.</p>
+
+<p>Another option would be to create a random number using rand(0, 61). Then using a switch statement append a string together based upon the result. This method results in code roughly 133 lines in length (excluding comments, but allowing whitespace), while the previous method is 27 lines in length (again excluding comments, but allowing whitespace).</p>
+
+<h1 id="credits">Credits</h1>
+
+<ul>
+<li><a href="https://github.com/kevinkabatra">Kevin Kabatra</a></li>
+</ul>
+
+<h1 id="peace-out">PEACE OUT!</h1></div></body>
+</html>
